@@ -2,10 +2,11 @@
  * @Author: dushuai
  * @Date: 2024-03-18 09:33:02
  * @LastEditors: dushuai
- * @LastEditTime: 2024-03-19 10:05:01
+ * @LastEditTime: 2024-03-19 10:42:20
  * @description: config
  */
 import { defineConfig } from 'vitepress'
+import { nav, sidebar } from './layout/config'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -19,20 +20,9 @@ export default defineConfig({
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
-    ],
+    nav,
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+    sidebar,
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
